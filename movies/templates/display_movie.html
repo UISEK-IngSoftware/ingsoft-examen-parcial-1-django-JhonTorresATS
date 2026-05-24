@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Detalles de la Película{% endblock title %}
+
+
+{% block content %}
+{# Tarjeta de información de la Película con foto y datos físicos. #}
+<div class="movie-detail-card">
+  <div class="movie-info">
+    <h3 class="movie-title">{{ movie.name|capfirst }}</h3>
+    
+    <div class="movie-detail-item">
+      <span class="movie-detail-label">Género</span>
+      <span class="movie-detail-value">{{ movie.get_genre_display }}</span>
+    </div>
+    <div class="movie-detail-item">
+      <span class="movie-detail-label">Director</span>
+      <span class="movie-detail-value">{{ movie.director }}</span>
+    </div>
+    <div class="movie-detail-item">
+      <span class="movie-detail-label">Estreno</span>
+      <span class="movie-detail-value">{{ movie.date|date:"d/m/Y" }}</span>
+    </div>
+    
+    <div class="movie-synopsis">
+      <h6><i class="fas fa-align-left"></i> Sinopsis</h6>
+      <p>{{ movie.synopsis }}</p>
+    </div>
+    
+    <div class="text-center mt-4">
+      <a href="{% url 'movies:index' %}" class="btn-back">
+        ← Volver al listado
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

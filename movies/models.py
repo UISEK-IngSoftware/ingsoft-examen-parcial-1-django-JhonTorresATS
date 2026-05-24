@@ -1,3 +1,19 @@
 from django.db import models
 
-# Create your models here.
+class Movie(models.Model):
+    GENRE_CHOICES = [
+        ('A', 'Accion'),
+        ('H', 'Horror'),
+        ('T', 'Thriller'),
+        ('C', 'Comedia'),
+        ('R', 'Romance'),
+        ('F', 'Ciencia Ficcion'),
+    ]
+    name = models.CharField(max_length=100, null=False)
+    genre = models.CharField(max_length=30, choices=GENRE_CHOICES, null=False)
+    director = models.CharField(max_length=30, null=False)
+    date = models.DateField(null=False)
+    synopsis = models.TextField(max_length=200, null=False)
+
+    def __str__(self):
+        return f"{self.name} {self.director}"
