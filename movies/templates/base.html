@@ -9,9 +9,11 @@
 
     </head>
     <body>
+        <div class="text-center logo-header" style="padding: 0; overflow: hidden;">
+            <img class="logo" src="{% static 'sony.png' %}" alt="Logo">
+        </div>
         <div class="container">
-            <div class="bg-dark text-white p-4 text-center mb-4 d-flex align-items-center justify-content-center gap-3">
-                <img class="logo" src="{% static 'sony.png' %}" alt="Logo">
+            <div class="bg-white text-white p-4 text-center mb-4 d-flex align-items-center justify-content-center gap-3">
             </div>  
             {% block content %}{% endblock content %}
         </div>

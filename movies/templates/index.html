@@ -6,10 +6,10 @@
 <h3 class="mb-4 text-center tema">Peliculas</h3>
 <div class="row gx-4 gy-4">
     {% for movie in movies %}
-    <div class="col-md-4">
-      <div class="movie-detail-card">
-        <div class="movie-info">
-          <h3 class="movie-title">
+    <div class="col-md-12 ">
+      <div class="movie-card">
+        <div class="movie-info-index">
+          <h3 class="movie-title-index">
             <a href="{% url 'movies:movie_details' movie.id %}" class="text-dark text-decoration-none">
               {{ movie.name|capfirst }} - {{ movie.date }}
             </a>

@@ -1,11 +1,6 @@
-.logo {
-    width: 600px;
-    height: 130px;
-    margin-right: 100px;
-}
 /* Tarjeta de detalles de película */
 .movie-detail-card {
-    max-width: 500px;
+    max-width: 550px;
     margin: 2rem auto;
     border: none;
     border-radius: 24px;
@@ -27,7 +22,7 @@
     font-weight: 800;
     text-align: center;
     color: #1e2a3e;
-    border-bottom: 3px solid #ffc107;
+    border-bottom: 3px solid #291a42;
     display: inline-block;
     width: auto;
     margin: 0 auto 1rem auto;
@@ -96,27 +91,61 @@
 
 /*base.css*/
 .logo {
-    height: 70px;
-    width: auto;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-    background: rgba(255,255,255,0.15);
-    padding: 5px 15px;
-    border-radius: 40px;
-    transition: all 0.2s;
+width: 30%;               /* Ocupa todo el ancho del contenedor */
+height: auto;              /* Altura automática para mantener proporción */
+max-height: 180px;         /* Límite de altura para que no sea gigante */
+border-radius: 0;          /* Sin bordes redondeados para que pegue a los bordes */
+filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+transition: all 0.2s;
+}
+
+.text-center.logo-header {
+background-color: #000000;   /* fondo morado oscuro */
+padding: 1rem;              /* espacio interno */ 
 }
 
 .logo:hover {
-    background: rgba(255,255,255,0.25);
-    transform: scale(1.02);
+transform: scale(1.01);    /* Muy sutil para no desbordar */
+filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
+
 /* Index.css */
-.text-center{
+.tema{
     font-size: 1.8rem;
     font-weight: 800;
     text-align: center;
     color: #1e2a3e;
-    border-bottom: 3px solid #ffc107;
+    border-bottom: 3px solid #291a42;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto 1rem auto;
+    padding-bottom: 0.5rem;
+}
+.movie-card {
+    max-width: 1200px;
+    margin: 2rem auto;
+    border: none;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-info-index {
+    padding: 1.8rem;
+}
+
+.movie-title-index {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    color: #1e2a3e;
+    border-bottom: 3px solid #291a42;
     display: inline-block;
     width: auto;
     margin: 0 auto 1rem auto;
