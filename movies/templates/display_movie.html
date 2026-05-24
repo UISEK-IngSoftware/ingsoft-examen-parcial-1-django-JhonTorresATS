@@ -8,7 +8,8 @@
 <div class="movie-detail-card">
   <div class="movie-info">
     <h3 class="movie-title">{{ movie.name|capfirst }}</h3>
-    
+
+    <img src="{{ movie.picture.url }}" class="card-img-top" alt="{{ movie.name|capfirst }}">
     <div class="movie-detail-item">
       <span class="movie-detail-label">Género</span>
       <span class="movie-detail-value">{{ movie.get_genre_display }}</span>
@@ -23,7 +24,8 @@
     </div>
     
     <div class="movie-synopsis">
-      <h6><i class="fas fa-align-left"></i> Sinopsis</h6>
+      <!-- <h6><i class="fas fa-align-left"></i> Sinopsis</h6> -->
+      <h6>Sinopsis</h6>
       <p>{{ movie.synopsis }}</p>
     </div>
     

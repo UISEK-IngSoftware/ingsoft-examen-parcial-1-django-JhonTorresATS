@@ -12,5 +12,11 @@ def index(request):
 
 
 def movie_details(request, movie_id):
-    movie = get_object_or_404(Movie, id=movie_id)
-    return render(request, 'display_movie.html', {'movie': movie})
+    #movie = get_object_or_404(Movie, id=movie_id)
+    #return render(request, 'display_movie.html', {'movie': movie})
+    movie = Movie.objects.get(id=movie_id)
+    template = loader.get_template('display_movie.html')
+    context = {
+        'movie': movie
+    }
+    return HttpResponse(template.render(context, request))
